@@ -17,7 +17,7 @@ export const TodoList: React.FC = () => {
 
   return (
     <ul className={styles.todoList}>
-      {todos.map(todo => (
+      {todos.map((todo) => (
         <TodoItem todo={todo} />
       ))}
     </ul>
@@ -49,7 +49,7 @@ const AddTodoInput = () => {
 
   return (
     <form
-      onSubmit={async e => {
+      onSubmit={async (e) => {
         e.preventDefault();
         createTodo(text);
         setText("");
@@ -60,7 +60,7 @@ const AddTodoInput = () => {
         className={styles.input}
         placeholder="Buy some milk"
         value={text}
-        onChange={e => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value)}
       />
       <button className={styles.addButton}>Add</button>
     </form>
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
       </Head>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>Todos</h1>
+        <h1 className={styles.title}>My Todos</h1>
         <h2 className={styles.desc}>
           NextJS app connected to Postgres using Prisma and hosted on{" "}
           <a href="https://railway.app">Railway</a>
